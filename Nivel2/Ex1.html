@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarefas</title>
+  </head>
+
+  <body>
+    <h1>Minhas tarefas</h1>
+
+    <input type="text" id="tarefa" placeholder="Digite uma tarefa" />
+
+    <button id="adicionar">Adicionar</button>
+
+    <p id="contador">Tarefas: 0</p>
+
+    <ul id="lista"></ul>
+
+    <script>
+      const tarefa = document.querySelector("#tarefa");
+      const botao = document.querySelector("#adicionar");
+      const lista = document.querySelector("#lista");
+      const contadorTexto = document.querySelector("#contador");
+
+      let contador = 0;
+
+      botao.addEventListener("click", function () {
+        const texto = tarefa.value;
+
+        if (texto === "") {
+          alert("Digite uma tarefa!");
+          return;
+        }
+
+        const novaTarefa = document.createElement("li");
+
+        novaTarefa.textContent = texto;
+
+        lista.appendChild(novaTarefa);
+
+        contador = contador + 1;
+
+        contadorTexto.textContent = "Tarefas: " + contador;
+
+        tarefa.value = texto;
+      });
+    </script>
+  </body>
+</html>

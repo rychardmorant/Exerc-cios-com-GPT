@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Verificação</title>
+  </head>
+
+  <body>
+    <input type="number" id="idade" placeholder="Digite sua idade" />
+
+    <button id="verificar">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const idade = document.querySelector("#idade");
+      const botao = document.querySelector("#verificar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        if (idade.value >= 18) {
+          resultado.textContent = "Você tem 18 anos ou mais.";
+        } else {
+          resultado.textContent = "Você tem menos de 18 anos.";
+        }
+      });
+    </script>
+  </body>
+</html>

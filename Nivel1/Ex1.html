@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício</title>
+  </head>
+
+  <body>
+    <h1 id="titulo">Contador</h1>
+
+    <p id="numero">0</p>
+
+    <button id="adicionar">Adicionar</button>
+
+    <script>
+      const botao = document.querySelector("#adicionar");
+      const numero = document.querySelector("#numero");
+
+      let contador = 0;
+
+      botao.addEventListener("click", function () {
+        contador++;
+
+        numero.textContent = contador;
+      });
+    </script>
+  </body>
+</html>

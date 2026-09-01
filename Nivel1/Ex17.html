@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desconto</title>
+  </head>
+
+  <body>
+    <input type="number" id="preco" placeholder="Digite o preço" />
+
+    <button id="calcular">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const preco = document.querySelector("#preco");
+      const botao = document.querySelector("#calcular");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor = Number(preco.value);
+
+        if (valor >= 100) {
+          resultado.textContent = "Você ganhou desconto!";
+        } else {
+          resultado.textContent = "Sem desconto.";
+        }
+
+        console.log("resultado.textContent");
+      });
+    </script>
+  </body>
+</html>

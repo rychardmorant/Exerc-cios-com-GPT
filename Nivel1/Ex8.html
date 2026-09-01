@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mensagem</title>
+  </head>
+
+  <body>
+    <p id="mensagem">Mensagem inicial</p>
+
+    <button id="botao">Alterar</button>
+
+    <script>
+      const mensagem = document.querySelector("#mensagem");
+      const botao = document.querySelector("#botao");
+
+      botao.addEventListener("click", function () {
+        mensagem.textContent = "Mensagem alterada";
+
+        console.log(mensagem.textContent);
+      });
+    </script>
+  </body>
+</html>

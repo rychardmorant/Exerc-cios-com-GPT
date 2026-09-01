@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+    <input type="number" id="numero1" placeholder="Primeiro número" />
+
+    <input type="number" id="numero2" placeholder="Segundo número" />
+
+    <button id="somar">Somar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const numero1 = document.querySelector("#numero1");
+      const numero2 = document.querySelector("#numero2");
+      const botao = document.querySelector("#somar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor1 = numero1.value;
+        const valor2 = numero2.value;
+
+        const soma = Number(valor1) + Number(valor2);
+
+        resultado.textContent = "Resultado: " + soma;
+      });
+    </script>
+  </body>
+</html>

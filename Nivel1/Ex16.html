@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Temperatura</title>
+  </head>
+
+  <body>
+    <input type="number" id="temperatura" placeholder="Digite a temperatura" />
+
+    <button id="verificar">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const temperatura = document.querySelector("#temperatura");
+      const botao = document.querySelector("#verificar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor = Number(temperatura.value);
+
+        if (valor >= 30) {
+          resultado.textContent = "Está quente!";
+        } else {
+          resultado.textContent = "Não está quente.";
+        }
+      });
+    </script>
+  </body>
+</html>

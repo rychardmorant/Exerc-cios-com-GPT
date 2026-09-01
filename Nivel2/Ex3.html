@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nota</title>
+  </head>
+
+  <body>
+    <input type="number" id="nota" placeholder="Digite sua nota" />
+
+    <button id="verificar">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const nota = document.querySelector("#nota");
+      const botao = document.querySelector("#verificar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor = Number(nota.value);
+
+        if (valor >= 7 && valor <= 10) {
+          resultado.textContent = "Nota excelente!";
+        } else if (valor >= 5 && valor <= 6.9) {
+          resultado.textContent = "Nota suficiente.";
+        } else {
+          resultado.textContent = "Nota insuficiente.";
+        }
+
+        console.log(valor);
+      });
+    </script>
+  </body>
+</html>

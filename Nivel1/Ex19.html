@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro</title>
+  </head>
+
+  <body>
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+
+    <input type="number" id="idade" placeholder="Digite sua idade" />
+
+    <button id="verificar">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const nome = document.querySelector("#nome");
+      const idade = document.querySelector("#idade");
+      const botao = document.querySelector("#verificar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const nomeDigitado = nome.value;
+        const idadeDigitada = Number(idade.value);
+
+        if (idadeDigitada >= 18) {
+          resultado.textContent =
+            "Olá, " + nomeDigitado + "! Você pode entrar.";
+        } else {
+          resultado.textContent =
+            "Olá, " + nomeDigitado + "! Você não pode entrar.";
+        }
+
+        console.log(idadeDigitada);
+      });
+    </script>
+  </body>
+</html>

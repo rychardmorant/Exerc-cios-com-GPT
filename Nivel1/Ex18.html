@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Entrada</title>
+  </head>
+
+  <body>
+    <input type="number" id="idade" placeholder="Digite sua idade" />
+
+    <button id="verificar">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const idade = document.querySelector("#idade");
+      const botao = document.querySelector("#verificar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor = Number(idade.value);
+
+        if (valor >= 18) {
+          resultado.textContent = "Entrada permitida!";
+        } else {
+          resultado.textContent = "Entrada proibida!";
+        }
+      });
+    </script>
+  </body>
+</html>

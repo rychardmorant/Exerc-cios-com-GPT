@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contador</title>
+  </head>
+
+  <body>
+    <p id="numero">0</p>
+
+    <button id="aumentar">Aumentar</button>
+    <button id="diminuir">Diminuir</button>
+
+    <script>
+      const numero = document.querySelector("#numero");
+      const aumentar = document.querySelector("#aumentar");
+      const diminuir = document.querySelector("#diminuir");
+
+      let contador = 0;
+
+      aumentar.addEventListener("click", function () {
+        contador = contador + 1;
+        numero.textContent = contador;
+      });
+
+      diminuir.addEventListener("click", function () {
+        contador = contador - 1;
+        numero.textContent = contador;
+      });
+    </script>
+  </body>
+</html>

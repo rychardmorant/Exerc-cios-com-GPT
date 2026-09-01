@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+    <input type="number" id="numero1" placeholder="Primeiro número" />
+
+    <input type="number" id="numero2" placeholder="Segundo número" />
+
+    <button id="calcular">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const numero1 = document.querySelector("#numero1");
+      const numero2 = document.querySelector("#numero2");
+      const botao = document.querySelector("#calcular");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor1 = Number(numero1.value);
+        const valor2 = Number(numero2.value);
+
+        const soma = valor1 + valor2;
+
+        resultado.textContent = "Resultado: " + soma;
+
+        console.log(soma);
+        1;
+      });
+    </script>
+  </body>
+</html>
