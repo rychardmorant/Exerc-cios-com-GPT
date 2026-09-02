@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arredondamento</title>
+  </head>
+
+  <body>
+    <input type="number" id="numero" placeholder="Digite um número" />
+
+    <button id="arredondar">Arredondar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      const numero = document.querySelector("#numero");
+      const botao = document.querySelector("#arredondar");
+      const resultado = document.querySelector("#resultado");
+
+      botao.addEventListener("click", function () {
+        const valor = Number(numero.value);
+
+        const numeroArredondado = Math.round(valor);
+
+        resultado.textContent = "Resultado: " + numeroArredondado;
+
+        console.log(numeroArredondado);
+      });
+    </script>
+  </body>
+</html>
