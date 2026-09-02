@@ -1,0 +1,24 @@
+<input id="resposta" type="text" />
+<button id="botao">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+  const resposta = document.querySelector("#resposta");
+  const botao = document.querySelector("#botao");
+  const resultado = document.querySelector("#resultado");
+
+  botao.addEventListener("click", function () {
+    const respostaDigitada = resposta.value;
+    const respostaNormalizada = respostaDigitada.toLowerCase();
+
+    if (respostaNormalizada === "sim") {
+      resultado.textContent = "Você respondeu SIM.";
+    } else {
+      resultado.textContent = "Você respondeu NÃO.";
+    }
+
+    console.log("Resposta digitada:", respostaDigitada);
+    console.log("Resposta normalizada:", respostaNormalizada);
+  });
+</script>

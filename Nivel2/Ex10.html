@@ -1,0 +1,18 @@
+<input id="numero" type="number" />
+<button id="botao">Arredondar</button>
+
+<p id="resultado"></p>
+
+<script>
+  const numero = document.querySelector("#numero");
+  const botao = document.querySelector("#botao");
+  const resultado = document.querySelector("#resultado");
+
+  botao.addEventListener("click", function () {
+    const valor = Number(numero.value);
+
+    const numeroArredondado = Math.round(valor);
+
+    resultado.textContent = "Resultado: " + numeroArredondado;
+  });
+</script>

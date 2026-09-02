@@ -1,0 +1,23 @@
+<input id="pais" type="text" />
+<button id="botao">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+  const pais = document.querySelector("#pais");
+  const botao = document.querySelector("#botao");
+  const resultado = document.querySelector("#resultado");
+
+  botao.addEventListener("click", function () {
+    const paisDigitado = pais.value;
+    const paisNormalizado = paisDigitado.toLowerCase();
+
+    if (paisNormalizado === "brasil") {
+      resultado.textContent = "Você escolheu o Brasil.";
+    } else {
+      resultado.textContent = "Você escolheu outro país.";
+    }
+
+    console.log(paisNormalizado);
+  });
+</script>

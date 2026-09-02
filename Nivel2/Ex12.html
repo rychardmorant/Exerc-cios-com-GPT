@@ -1,0 +1,23 @@
+<input id="nome" type="text" />
+<button id="botao">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+  const nome = document.querySelector("#nome");
+  const botao = document.querySelector("#botao");
+  const resultado = document.querySelector("#resultado");
+
+  botao.addEventListener("click", function () {
+    const nomeDigitado = nome.value;
+    const nomeLimpo = nomeDigitado.trim();
+
+    if (nomeLimpo === "") {
+      resultado.textContent = "Você não digitou seu nome.";
+    } else {
+      resultado.textContent = "Olá, " + nomeLimpo + "!";
+    }
+
+    console.log(nomeLimpo);
+  });
+</script>
